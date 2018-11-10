@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<script>	
+
+			let arr=[1,1,2,2,5,5,6,6,9,9,9,9,9,7,]\
+
+			//Es6数组去重
+			let set=new Set(arr)
+			console.log(Array.from(set))
+
+
+
+
+			//Es5数组去重
+			let narr=[]
+			arr.forEach((value)=>{
+				if(narr.indexOf(value)==-1){
+					narr.push(value)
+				}
+			})
+			console.log(narr)
+
+			//jqeury数组去重
+			let arr1=[]
+			arr.forEach((value)=>{
+				if(!$.inArray(value,arr1)){
+					arr1.push(value)
+				}
+				
+			})
+			console.log(arr1)
+	</script>
+</body>
+</html>
